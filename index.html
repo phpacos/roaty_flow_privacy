@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Privacy policy and support information for the Roasty Flow Chrome extension."
+    />
+    <meta name="color-scheme" content="dark light" />
+    <title>Roasty Flow — Privacy &amp; Support</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --background: #100f0e;
+        --surface: #1b1917;
+        --surface-raised: #24211e;
+        --text: #f8f3e8;
+        --muted: #b8afa2;
+        --line: rgba(255, 255, 255, 0.11);
+        --accent: #ff7a2f;
+        --accent-soft: rgba(255, 122, 47, 0.14);
+        --gold: #ffd45c;
+        --max-width: 860px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 50% -10%, rgba(255, 122, 47, 0.2), transparent 34rem),
+          var(--background);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        line-height: 1.7;
+      }
+
+      a {
+        color: var(--gold);
+        text-underline-offset: 0.2em;
+      }
+
+      a:hover {
+        color: #ffe496;
+      }
+
+      header,
+      main,
+      footer {
+        width: min(calc(100% - 2rem), var(--max-width));
+        margin-inline: auto;
+      }
+
+      header {
+        padding: 4.5rem 0 2.5rem;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.65rem;
+        margin-bottom: 2rem;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+
+      .brand-mark {
+        display: grid;
+        width: 2.5rem;
+        height: 2.5rem;
+        place-items: center;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 0.8rem;
+        background: linear-gradient(145deg, #ff903c, #d93618);
+        box-shadow: 0 0.75rem 2rem rgba(255, 87, 29, 0.2);
+      }
+
+      .eyebrow {
+        margin: 0 0 0.7rem;
+        color: var(--accent);
+        font-size: 0.78rem;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        max-width: 15ch;
+        margin: 0;
+        font-size: clamp(2.35rem, 8vw, 4.8rem);
+        letter-spacing: -0.055em;
+        line-height: 0.98;
+      }
+
+      .intro {
+        max-width: 64ch;
+        margin: 1.5rem 0 0;
+        color: var(--muted);
+        font-size: 1.08rem;
+      }
+
+      .updated {
+        display: inline-block;
+        margin-top: 1.25rem;
+        padding: 0.4rem 0.75rem;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        color: var(--muted);
+        font-size: 0.8rem;
+      }
+
+      .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.85rem;
+        margin: 0 0 2rem;
+      }
+
+      .summary-card,
+      section {
+        border: 1px solid var(--line);
+        background: rgba(27, 25, 23, 0.9);
+        box-shadow: 0 1.2rem 4rem rgba(0, 0, 0, 0.18);
+      }
+
+      .summary-card {
+        min-height: 9rem;
+        padding: 1.2rem;
+        border-radius: 1.1rem;
+      }
+
+      .summary-card strong {
+        display: block;
+        margin-bottom: 0.45rem;
+        color: var(--gold);
+        font-size: 0.95rem;
+      }
+
+      .summary-card p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 0.9rem;
+        line-height: 1.55;
+      }
+
+      nav {
+        margin-bottom: 2rem;
+        padding: 1rem 1.15rem;
+        border: 1px solid var(--line);
+        border-radius: 1rem;
+        background: rgba(255, 122, 47, 0.06);
+      }
+
+      nav strong {
+        margin-right: 0.8rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 0.25rem 0.7rem 0.25rem 0;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      section {
+        margin-bottom: 1rem;
+        padding: clamp(1.25rem, 4vw, 2rem);
+        border-radius: 1.25rem;
+      }
+
+      section:target {
+        border-color: rgba(255, 122, 47, 0.55);
+      }
+
+      h2 {
+        margin: 0 0 0.85rem;
+        font-size: clamp(1.35rem, 4vw, 1.8rem);
+        letter-spacing: -0.025em;
+        line-height: 1.2;
+      }
+
+      h3 {
+        margin: 1.5rem 0 0.35rem;
+        font-size: 1rem;
+      }
+
+      p,
+      ul {
+        margin-top: 0.75rem;
+      }
+
+      section p,
+      section li {
+        color: var(--muted);
+      }
+
+      li + li {
+        margin-top: 0.55rem;
+      }
+
+      .notice {
+        padding: 1rem 1.1rem;
+        border-left: 3px solid var(--accent);
+        border-radius: 0.6rem;
+        background: var(--accent-soft);
+      }
+
+      table {
+        width: 100%;
+        margin-top: 1rem;
+        border-collapse: collapse;
+        font-size: 0.9rem;
+      }
+
+      th,
+      td {
+        padding: 0.8rem;
+        border-bottom: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        color: var(--text);
+      }
+
+      td {
+        color: var(--muted);
+      }
+
+      footer {
+        padding: 2.5rem 0 4rem;
+        color: #857d73;
+        font-size: 0.85rem;
+        text-align: center;
+      }
+
+      @media (max-width: 680px) {
+        header {
+          padding-top: 3rem;
+        }
+
+        .summary-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .summary-card {
+          min-height: 0;
+        }
+
+        table,
+        tbody,
+        tr,
+        th,
+        td {
+          display: block;
+        }
+
+        th {
+          padding-bottom: 0.2rem;
+          border: 0;
+        }
+
+        td {
+          padding-top: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="brand"><span class="brand-mark" aria-hidden="true">🔥</span> Roasty Flow</div>
+      <p class="eyebrow">Privacy &amp; Support</p>
+      <h1>Your work stays yours.</h1>
+      <p class="intro">
+        Roasty Flow is a local-first Chrome extension for planning focused work,
+        tracking intentional browsing during an active Flow, and capturing useful
+        outputs. This page explains exactly what information it handles and why.
+      </p>
+      <span class="updated">Last updated: October 14, 2026</span>
+    </header>
+
+    <main>
+      <div class="summary-grid" aria-label="Privacy summary">
+        <article class="summary-card">
+          <strong>Stored locally</strong>
+          <p>Your plans, tasks, goals, sessions, and captured assets remain in Chrome storage on your device.</p>
+        </article>
+        <article class="summary-card">
+          <strong>No developer server</strong>
+          <p>Roasty Flow does not send your productivity data to a server operated by its developer.</p>
+        </article>
+        <article class="summary-card">
+          <strong>User-controlled</strong>
+          <p>Browsing is measured only during an active Flow, and Skool actions begin only after your explicit action.</p>
+        </article>
+      </div>
+
+      <nav aria-label="On this page">
+        <strong>On this page</strong>
+        <a href="#privacy">Privacy policy</a>
+        <a href="#data">Data handled</a>
+        <a href="#skool">Skool</a>
+        <a href="#permissions">Permissions</a>
+        <a href="#choices">Your choices</a>
+        <a href="#limited-use">Limited Use</a>
+        <a href="#support">Support</a>
+      </nav>
+
+      <section id="privacy">
+        <p class="eyebrow">Privacy policy</p>
+        <h2>Scope and commitment</h2>
+        <p>
+          This Privacy Policy applies to the Roasty Flow Chrome extension. Roasty Flow
+          does not sell personal information, display advertising, use third-party
+          analytics, or transmit your productivity records to the developer.
+        </p>
+        <p>
+          The extension handles information only to provide its user-facing productivity,
+          focus tracking, capture, review, and membership-validation features.
+        </p>
+      </section>
+
+      <section id="data">
+        <p class="eyebrow">Data handled</p>
+        <h2>Information processed by the extension</h2>
+
+        <h3>Information you create</h3>
+        <ul>
+          <li>Goals, tasks, task groups, schedules, progress, and reminders.</li>
+          <li>Flow sessions, planned duration, status, and completion information.</li>
+          <li>Notes and captured assets, including titles, body text, source links, and linked tasks.</li>
+          <li>Preferences and interface settings.</li>
+        </ul>
+
+        <h3>Browsing activity during an active Flow</h3>
+        <p>
+          While you have deliberately started a Flow, Roasty Flow may process the active
+          page's domain, URL, title, visit time, duration, visit count, and the productivity
+          classification you assign. This information powers planned-versus-actual review,
+          attention summaries, and the Flame score. Roasty Flow does not continuously track
+          browsing when no Flow is active.
+        </p>
+
+        <h3>Local storage</h3>
+        <p>
+          This information is stored through <code>chrome.storage.local</code> in the Chrome
+          profile where the extension is installed. It is not synchronized to a developer
+          account and is not transmitted to a Roasty Flow server.
+        </p>
+      </section>
+
+      <section id="skool">
+        <p class="eyebrow">External service</p>
+        <h2>How Roasty Flow interacts with Skool</h2>
+        <p>
+          Access to Roasty Flow is limited to active members of the Guruless Business
+          Builders community. When you select <strong>Open community and validate</strong>,
+          Chrome opens the community on Skool using your existing browser session.
+        </p>
+        <p>
+          The extension locally examines the resulting Skool page address and limited,
+          transient page signals needed to distinguish the community, its public About page,
+          and technical error pages. These validation signals are not sent to the developer
+          or stored as community content. Roasty Flow does not read or store your Skool
+          password or authentication cookies.
+        </p>
+        <p>
+          Membership confirmation is stored locally for up to 24 hours. A technical failure
+          does not extend that period. Skool receives the ordinary network information that
+          any website receives when you visit it and handles that information under its own
+          terms and privacy policy.
+        </p>
+        <p>
+          If you explicitly use a feature that prepares a Skool draft, Roasty Flow opens
+          Skool and places your chosen content into the editor for your review. It does not
+          publish the post automatically.
+        </p>
+      </section>
+
+      <section id="permissions">
+        <p class="eyebrow">Chrome permissions</p>
+        <h2>Why each permission is needed</h2>
+        <div style="overflow-x: auto">
+          <table>
+            <thead>
+              <tr><th>Permission</th><th>Purpose</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">sidePanel</th><td>Displays the Roasty Flow interface beside the current page.</td></tr>
+              <tr><th scope="row">storage</th><td>Saves plans, sessions, assets, preferences, and membership status locally.</td></tr>
+              <tr><th scope="row">tabs</th><td>Reads the active tab during an active Flow and opens user-requested Skool pages.</td></tr>
+              <tr><th scope="row">alarms</th><td>Runs local reminders, Flow timing, and the 24-hour membership expiry.</td></tr>
+              <tr><th scope="row">scripting</th><td>Observes the user-opened Skool validation page and prepares drafts after explicit user action.</td></tr>
+              <tr><th scope="row">https://www.skool.com/*</th><td>Limits Skool page interaction to the Skool website.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="sharing">
+        <p class="eyebrow">Sharing &amp; retention</p>
+        <h2>No sale or unrelated disclosure</h2>
+        <p>
+          Roasty Flow does not sell, rent, or transfer your information to advertisers, data
+          brokers, or unrelated third parties. Data is retained locally until you delete it,
+          clear the extension's storage, or uninstall the extension. Removing the extension
+          normally removes its local Chrome storage from that profile.
+        </p>
+      </section>
+
+      <section id="choices">
+        <p class="eyebrow">Your choices</p>
+        <h2>Control over your information</h2>
+        <ul>
+          <li>Do not start a Flow when you do not want browsing activity measured.</li>
+          <li>Edit or delete tasks, goals, and assets from within Roasty Flow.</li>
+          <li>Review every prepared Skool draft before deciding whether to publish it.</li>
+          <li>Uninstall Roasty Flow to stop all extension processing and remove its local data.</li>
+        </ul>
+      </section>
+
+      <section id="limited-use">
+        <p class="eyebrow">Limited Use</p>
+        <h2>Chrome Web Store User Data Policy</h2>
+        <p class="notice">
+          Roasty Flow's use and transfer of information received from Google APIs adheres to
+          the Chrome Web Store User Data Policy, including the Limited Use requirements.
+        </p>
+        <p>
+          Information is used only to provide or improve Roasty Flow's prominent,
+          user-facing features. It is not used for advertising, creditworthiness, lending,
+          or personalized advertising, and is not transferred for unrelated purposes.
+        </p>
+      </section>
+
+      <section id="changes">
+        <p class="eyebrow">Policy changes</p>
+        <h2>Updates to this policy</h2>
+        <p>
+          Material changes will be published on this page with a revised date. If an update
+          changes how the extension handles data, the Chrome Web Store disclosures and any
+          required in-product notices will be updated as well.
+        </p>
+      </section>
+
+      <section id="support">
+        <p class="eyebrow">Support</p>
+        <h2>Questions or privacy requests</h2>
+        <p>
+          For support, privacy questions, or deletion guidance, open an issue in the
+          <a href="https://github.com/phpacos/roaty_flow_privacy/issues">Roasty Flow support repository</a>.
+          Do not include passwords, authentication cookies, private community content, or
+          other sensitive information in a public issue.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Roasty Flow. No cookies, analytics, or advertising are used on this page.</p>
+    </footer>
+  </body>
+</html>
