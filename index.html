@@ -286,7 +286,7 @@
         tracking intentional browsing during an active Flow, and capturing useful
         outputs. This page explains exactly what information it handles and why.
       </p>
-      <span class="updated">Last updated: October 14, 2026</span>
+      <span class="updated">Effective and last updated: November 8, 2026</span>
     </header>
 
     <main>
@@ -309,8 +309,10 @@
         <strong>On this page</strong>
         <a href="#privacy">Privacy policy</a>
         <a href="#data">Data handled</a>
+        <a href="#consent">Consent &amp; local analysis</a>
         <a href="#skool">Skool</a>
         <a href="#permissions">Permissions</a>
+        <a href="#retention">Retention</a>
         <a href="#choices">Your choices</a>
         <a href="#limited-use">Limited Use</a>
         <a href="#support">Support</a>
@@ -327,6 +329,12 @@
         <p>
           The extension handles information only to provide its user-facing productivity,
           focus tracking, capture, review, and membership-validation features.
+        </p>
+        <p>
+          Roasty Flow has no developer-operated backend, account database, advertising
+          system, or analytics service. The developer cannot remotely view the information
+          stored in your Chrome profile. The developer receives information only when you
+          deliberately include it in a support request.
         </p>
       </section>
 
@@ -356,6 +364,97 @@
           This information is stored through <code>chrome.storage.local</code> in the Chrome
           profile where the extension is installed. It is not synchronized to a developer
           account and is not transmitted to a Roasty Flow server.
+        </p>
+
+        <h3>Data inventory</h3>
+        <div style="overflow-x: auto">
+          <table>
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Examples</th>
+                <th>Purpose</th>
+                <th>Storage and disclosure</th>
+                <th>Retention</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Plans and goals</th>
+                <td>Goals, tasks, schedules, progress, reminders, and task groups.</td>
+                <td>Plan focused work and measure task progress.</td>
+                <td>Stored locally. Not sent to the developer or third parties.</td>
+                <td>Until edited or deleted where controls are available, Chrome extension storage is cleared, or the extension is uninstalled.</td>
+              </tr>
+              <tr>
+                <th scope="row">Flow and review records</th>
+                <td>Start and end times, planned duration, completion status, Pomodoro choice, daily summaries, and Flame score components.</td>
+                <td>Run focus sessions and show personal productivity summaries.</td>
+                <td>Stored and calculated locally. Not sent to the developer or third parties.</td>
+                <td>Until Chrome extension storage is cleared or the extension is uninstalled.</td>
+              </tr>
+              <tr>
+                <th scope="row">Web browsing activity</th>
+                <td>Active page domain, URL, title, visit time, active duration, visit count, and a classification you assign.</td>
+                <td>Compare planned and actual browsing and calculate attention summaries during an active Flow.</td>
+                <td>Stored and processed locally. Not sent to the developer, advertisers, or analytics providers.</td>
+                <td>Until Chrome extension storage is cleared or the extension is uninstalled.</td>
+              </tr>
+              <tr>
+                <th scope="row">Captured content</th>
+                <td>Notes, titles, body text, source links, asset type, and linked tasks that you choose to save.</td>
+                <td>Create reusable work outputs and optional Skool drafts.</td>
+                <td>Stored locally. Draft content is placed into Skool only after your explicit action.</td>
+                <td>Until deleted where controls are available, Chrome extension storage is cleared, or the extension is uninstalled.</td>
+              </tr>
+              <tr>
+                <th scope="row">Preferences</th>
+                <td>Interface state, selected views, theme, and other local settings.</td>
+                <td>Remember how the extension is configured.</td>
+                <td>Stored locally. Not sent to the developer or third parties.</td>
+                <td>Until reset, Chrome extension storage is cleared, or the extension is uninstalled.</td>
+              </tr>
+              <tr>
+                <th scope="row">Membership validation metadata</th>
+                <td>Validation outcome, check and authorization timestamps, validity time, technical reason, and clock-integrity timestamps.</td>
+                <td>Confirm that the user has current access to the required Skool community and expire that access safely.</td>
+                <td>Stored locally. Skool is contacted directly in the user-opened tab; the metadata is not sent to the developer.</td>
+                <td>Authorization is valid for no more than 24 hours. The local validation record may remain until it is replaced, Chrome extension storage is cleared, or the extension is uninstalled.</td>
+              </tr>
+              <tr>
+                <th scope="row">Transient Skool page signals</th>
+                <td>The final page address, page title, and limited visible text needed to distinguish the private community, its public About page, login, and technical error pages.</td>
+                <td>Classify the result of a user-requested membership check.</td>
+                <td>Processed transiently in the browser. Not retained as Skool content and not sent to the developer.</td>
+                <td>Only for the validation operation.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="consent">
+        <p class="eyebrow">Consent &amp; local analysis</p>
+        <h2>Tracking begins only when you choose</h2>
+        <p>
+          Before each Flow can start, Roasty Flow explains which browsing fields will be
+          processed and requires you to check the tracking-consent box. If you do not check
+          the box, the Flow does not start and browsing activity is not measured.
+        </p>
+        <p>
+          You can withdraw that choice by finishing the Flow. Tracking also stops
+          automatically when its planned time expires. If Chrome restarts while a previously
+          consented Flow is still inside its chosen time window, that same Flow may continue
+          until it ends; Roasty Flow does not create a new Flow without your consent.
+        </p>
+        <h3>Derived productivity and consumption summaries</h3>
+        <p>
+          Roasty Flow locally derives planned, productive, distracting, and unclassified
+          browsing totals, attention summaries, Flame scores, and personal feedback labels
+          such as <strong>Building</strong> or <strong>Mostly consuming</strong>. These results
+          are generated only for your own productivity review. They are not used for
+          advertising, identity profiling, eligibility decisions, creditworthiness, or any
+          legal or similarly significant decision about you.
         </p>
       </section>
 
@@ -407,14 +506,21 @@
         </div>
       </section>
 
-      <section id="sharing">
+      <section id="retention">
         <p class="eyebrow">Sharing &amp; retention</p>
         <h2>No sale or unrelated disclosure</h2>
         <p>
           Roasty Flow does not sell, rent, or transfer your information to advertisers, data
-          brokers, or unrelated third parties. Data is retained locally until you delete it,
-          clear the extension's storage, or uninstall the extension. Removing the extension
-          normally removes its local Chrome storage from that profile.
+          brokers, or unrelated third parties. Local records remain for the periods described
+          in the data inventory above. The developer does not receive, host, or back up those
+          records and therefore cannot retrieve or delete them remotely.
+        </p>
+        <p>
+          When Roasty Flow opens Skool at your request, Skool receives the ordinary request
+          and connection information needed to serve its website. When you visit this public
+          policy page, GitHub Pages may process ordinary web-server request information under
+          GitHub's own privacy terms. Roasty Flow does not add analytics, advertising pixels,
+          or tracking cookies to this page.
         </p>
       </section>
 
@@ -423,9 +529,10 @@
         <h2>Control over your information</h2>
         <ul>
           <li>Do not start a Flow when you do not want browsing activity measured.</li>
+          <li>Finish an active Flow at any time to stop browsing measurement.</li>
           <li>Edit or delete tasks, goals, and assets from within Roasty Flow.</li>
           <li>Review every prepared Skool draft before deciding whether to publish it.</li>
-          <li>Uninstall Roasty Flow to stop all extension processing and remove its local data.</li>
+          <li>Uninstall Roasty Flow to stop extension processing and remove its locally stored data from that Chrome profile.</li>
         </ul>
       </section>
 
@@ -433,13 +540,20 @@
         <p class="eyebrow">Limited Use</p>
         <h2>Chrome Web Store User Data Policy</h2>
         <p class="notice">
-          Roasty Flow's use and transfer of information received from Google APIs adheres to
-          the Chrome Web Store User Data Policy, including the Limited Use requirements.
+          Roasty Flow's handling of user data complies with the Chrome Web Store User Data
+          Policy, including the Limited Use requirements.
         </p>
         <p>
           Information is used only to provide or improve Roasty Flow's prominent,
           user-facing features. It is not used for advertising, creditworthiness, lending,
-          or personalized advertising, and is not transferred for unrelated purposes.
+          surveillance, or personalized advertising, and is not transferred for unrelated
+          purposes. Human access by the developer does not occur because Roasty Flow does not
+          receive the local data. The only exception is information that a user deliberately
+          includes in a support request.
+        </p>
+        <p>
+          Roasty Flow does not use Google OAuth and does not access Google account data.
+          Chrome extension APIs are used only for the functions described on this page.
         </p>
       </section>
 
@@ -461,6 +575,12 @@
           <a href="https://github.com/phpacos/roaty_flow_privacy/issues">Roasty Flow support repository</a>.
           Do not include passwords, authentication cookies, private community content, or
           other sensitive information in a public issue.
+        </p>
+        <p>
+          If your request would require sharing sensitive information, open a generic issue
+          asking for a private reply channel without including that information in the issue.
+          Roasty Flow does not require browsing records, passwords, cookies, or private Skool
+          content to provide ordinary support.
         </p>
       </section>
     </main>
